@@ -161,7 +161,36 @@ The below resources are created using Terraform:
 
 ## Phase 3: Terraform Execution
 
-### Task-1: Initialize Terraform
+### Task-1: Configure AWS CLI
+
+1. Before running Terraform commands, AWS CLI should be configured on the machine.
+2. Terraform uses these AWS credentials to connect to the AWS account and create the required resources.
+3. Run the below command to configure AWS CLI.
+
+   ```
+   aws configure
+   ```
+
+4. Enter the required details when prompted.
+
+   ```
+   AWS Access Key ID [None]: <your-access-key-id>
+   AWS Secret Access Key [None]: <your-secret-access-key>
+   Default region name [None]: <your-aws-region>
+   Default output format [None]: json
+   ```
+
+5. The region entered here should match the region used in `terraform.tfvars`.
+6. Once configured, run the below command to confirm that AWS CLI is able to connect to the account.
+
+   ```
+   aws sts get-caller-identity
+   ```
+
+> [!NOTE]
+> Do not commit AWS access keys or secret keys in the repository. Also avoid uploading screenshots that show the access key, secret key, account details, or any other confidential information.
+
+### Task-2: Initialize Terraform
 
 1. Navigate to the project folder.
 
@@ -176,7 +205,7 @@ The below resources are created using Terraform:
    ```
 
 
-### Task-2: Validate Terraform Configuration
+### Task-3: Validate Terraform Configuration
 
 1. Run the below command to validate the Terraform files.
 
@@ -186,7 +215,7 @@ The below resources are created using Terraform:
 
    <img width="840" height="39" alt="terraform_validate" src="https://github.com/user-attachments/assets/0058ed96-10da-4050-8638-e25e0085d1e4" />
 
-### Task-3: Review the Terraform Plan
+### Task-4: Review the Terraform Plan
 
 1. Run the below command to check which resources will be created.
 
@@ -200,7 +229,7 @@ The below resources are created using Terraform:
 
    <img width="1063" height="1065" alt="terraform_plan_2" src="https://github.com/user-attachments/assets/9fca9ac0-f4c1-445c-93a9-eba17809eb7b" />
 
-### Task-4: Apply Terraform Configuration
+### Task-5: Apply Terraform Configuration
 
 1. Run the below command to create the AWS resources.
 
