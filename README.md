@@ -180,6 +180,8 @@ The below resources are created using Terraform:
    Default output format [None]: json
    ```
 
+   <img width="895" height="161" alt="aws_configure" src="https://github.com/user-attachments/assets/798d2bd9-55dc-4f44-90da-2f9ba421b558" />
+
 5. The region entered here should match the region used in `terraform.tfvars`.
 6. Once configured, run the below command to confirm that AWS CLI is able to connect to the account.
 
@@ -203,6 +205,8 @@ The below resources are created using Terraform:
    ```
    terraform init
    ```
+
+   <img width="813" height="415" alt="terraform_init" src="https://github.com/user-attachments/assets/38e69721-9a86-47ce-b070-dfec5c4ef174" />
 
 
 ### Task-3: Validate Terraform Configuration
