@@ -189,9 +189,6 @@ The below resources are created using Terraform:
    aws sts get-caller-identity
    ```
 
-> [!NOTE]
-> Do not commit AWS access keys or secret keys in the repository. Also avoid uploading screenshots that show the access key, secret key, account details, or any other confidential information.
-
 ### Task-2: Initialize Terraform
 
 1. Navigate to the project folder.
