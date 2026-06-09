@@ -14,4 +14,3 @@ EOT
 
 systemctl start nginx
 systemctl enable nginx
-EOF
